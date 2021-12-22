@@ -1,6 +1,6 @@
 package com.whosaidmeow.services;
 
-import com.whosaidmeow.common.events.NewInventoryEvent;
+import com.whosaidmeow.brewery.model.events.NewInventoryEvent;
 import com.whosaidmeow.domain.BeerInventory;
 import com.whosaidmeow.repositories.BeerInventoryRepository;
 import lombok.RequiredArgsConstructor;

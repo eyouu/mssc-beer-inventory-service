@@ -1,4 +1,4 @@
-package com.whosaidmeow.common.events;
+package com.whosaidmeow.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

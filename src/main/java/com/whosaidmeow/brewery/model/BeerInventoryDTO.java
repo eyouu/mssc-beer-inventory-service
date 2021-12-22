@@ -1,4 +1,4 @@
-package com.whosaidmeow.web.model;
+package com.whosaidmeow.brewery.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,7 +12,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerInventoryDto {
+public class BeerInventoryDTO {
 
     private UUID id;
     private OffsetDateTime createdDate;

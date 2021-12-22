@@ -1,13 +1,13 @@
 package com.whosaidmeow.web.mappers;
 
+import com.whosaidmeow.brewery.model.BeerInventoryDTO;
 import com.whosaidmeow.domain.BeerInventory;
-import com.whosaidmeow.web.model.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 @Mapper(uses = {DateMapper.class})
 public interface BeerInventoryMapper {
 
-    BeerInventory beerInventoryDtoToBeerInventory(BeerInventoryDto beerInventoryDTO);
+    BeerInventory beerInventoryDtoToBeerInventory(BeerInventoryDTO beerInventoryDTO);
 
-    BeerInventoryDto beerInventoryToBeerInventoryDto(BeerInventory beerInventory);
+    BeerInventoryDTO beerInventoryToBeerInventoryDto(BeerInventory beerInventory);
 }

@@ -2,7 +2,7 @@ package com.whosaidmeow.web.controllers;
 
 import com.whosaidmeow.repositories.BeerInventoryRepository;
 import com.whosaidmeow.web.mappers.BeerInventoryMapper;
-import com.whosaidmeow.web.model.BeerInventoryDto;
+import com.whosaidmeow.brewery.model.BeerInventoryDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ public class BeerInventoryController {
     private final BeerInventoryMapper beerInventoryMapper;
 
     @GetMapping("api/v1/beer/{beerId}/inventory")
-    public List<BeerInventoryDto> listBeersById(@PathVariable UUID beerId){
+    public List<BeerInventoryDTO> listBeersById(@PathVariable UUID beerId){
         log.debug("Finding Inventory for beerId:" + beerId);
 
         return beerInventoryRepository.findAllByBeerId(beerId)
