@@ -30,7 +30,13 @@ public class AllocationListener {
             Boolean allocationResult = allocationService.allocateOrder(allocateOrderRequestEvent.getBeerOrderDTO());
 
             // if allocation result = false means we are not fully allocated and should be in pending
-            builder.pendingInventory(!allocationResult);
+            if (allocationResult) {
+                builder.pendingInventory(false);
+            } else {
+                builder.pendingInventory(true);
+            }
+
+            builder.allocationError(false);
         } catch (Exception e) {
             log.error("Allocation failed for oder with id: {}", allocateOrderRequestEvent.getBeerOrderDTO().getId());
             builder.allocationError(true);
